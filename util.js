@@ -11,7 +11,7 @@ export function commonHTML (tag) {
     for (const key in o) {
       params.push(`${key}="${o[key]}"`)
     }
-    return `<${tag} ${params.join(' ')}>${c}</${tag}>`
+    return `<${tag} ${params.join(' ')}>${escapeHtml(c)}</${tag}>`
   }
 }
 

@@ -30,3 +30,5 @@ export default r
   .define('tfoot', commonHTML('tfoot'))
   .define('th', commonHTML('th'))
   .define('thead', commonHTML('thead'))
+
+export * from './util.js'
