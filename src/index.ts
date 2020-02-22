@@ -1,1 +1,3 @@
-console.log('Hello typescript!')
+import { renderer } from './renderer'
+
+export default renderer
