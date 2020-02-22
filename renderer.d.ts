@@ -14,7 +14,7 @@ declare type TRenderer<T = {}> =
   } & {
     [S in keyof T]: (content?: string | IRendererCaller<T>, options?: T[S]) => TRenderer<T>
   } & {
-    (content: string): TRenderer<T>
+    (content?: string): TRenderer<T>
   }
 
 declare const renderer: TRenderer
