@@ -44,14 +44,14 @@ export class Renderer<T = {}> {
     } else {
       this.context.children.push((async () => {
         const sub = this.sub()
-        const val = await content(sub) || await sub.getResult()
+        const val = await content(sub) || await sub.g()
         return this.handlers.get(tag)!(this, val, options)
       })())
     }
     return this
   }
 
-  async getResult () {
+  async g () {
     const children = await Promise.all(this.context.children)
     return children.join('\n')
   }
