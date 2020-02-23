@@ -15,9 +15,6 @@ class Renderer extends ExtensibleFunction {
       children: []
     }
     this._handlers = new Map()
-
-    this.__call__ = this.__call__.bind(this)
-    return this
   }
 
   __call__ (content) {
